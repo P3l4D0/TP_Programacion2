@@ -3,7 +3,7 @@ public class Comprobante {
     private int numero;
     private Fecha fecha;
 
-    public Comprobante(int t, int n, Fecha f){
+    public Comprobante(char t, int n, Fecha f){
         setTipo(t);
         setNumero(n);
         setFecha(f);
