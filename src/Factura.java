@@ -1,6 +1,6 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
-import javax.swing.text.html.HTMLDocument.*;
 
 public class Factura extends Comprobante {
     private ArrayList<Producto> mProducto;
@@ -10,9 +10,10 @@ public class Factura extends Comprobante {
     public Factura(char t, int n, Fecha f, Cliente cli) {
         super(t, n, f);
         setMCliente(cli);
+        mProducto = new ArrayList<>();
     }
 
-    public ArrayList<Producto> getMProductos() {
+    public ArrayList<Producto> getMProducto() {
         return mProducto;
     }
 
@@ -46,7 +47,7 @@ public class Factura extends Comprobante {
         while (iter.hasNext()) {
             Producto p = iter.next();
             System.out.printf("Codigo: %d Descripcion: %s Precio: %5.2f \n",
-            p.getCodigo(), p.getDescripcion(), p.getPrecio(););
+            p.getCodigo(), p.getDescripcion(), p.getPrecio());
         }
 
     }
